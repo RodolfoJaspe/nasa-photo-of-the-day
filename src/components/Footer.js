@@ -1,11 +1,18 @@
 import React from 'react';
-import './Footer.css'
+import styled from 'styled-components';
 
 export default function (props) {
     const {photoUrl} = props;
+
+    const FooterDiv = styled.div`
+        background: url(${photoUrl});
+        background-size: cover;
+        background-position: bottom;
+        height: 20vh;
+    `
     
     return (
-        <div className="footer" style={{backgroundImage: `url(${photoUrl})`}}>
-        </div>
+        <FooterDiv>
+        </FooterDiv>
     )
 }
